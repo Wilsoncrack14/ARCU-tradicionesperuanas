@@ -1,0 +1,22 @@
+#selva{
+    background-image: url("selva.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.imagen{
+    transform: translate(20px,80px) !important;
+    width:500px;
+    height: 300px;
+  }
+  iframe{
+      border-radius: 20px;    
+  }
+  .texto{
+      margin-top: 60px;
+      background-color: #000000a6;
+      padding: 15px;
+      border-radius: 20px;
+  }
+  .navegacion{
+    background-color: #2a3131;
+  }

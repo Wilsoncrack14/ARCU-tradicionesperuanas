@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*{  padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+} 
+.principal{
+    background-color: #2a3131;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("img/arte\ y\ cultura.jpg ") ;
+} 
+.navegacion{
+    display:flex ;
+    width: 100%;
+    padding: 0% 20px;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color:#443d3c;
+}
+.links{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+.links a {
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+.logo{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    width: 72%;
+}
+.texto{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.682);
+    border-radius: 15px;
+    margin-top: 100px;
+}
+.contenedor{
+   padding: 50px;
+   display: flex;
+   gap: 20px;
+   justify-content: space-around;
+   
+   
+}
+.costa{
+    flex-direction: row-reverse;
+}
+.imagen{
+    width: 40%;
+    height: 100%;
+    transform: translateX(-50px);
+    box-shadow: 50px;
+}
+.imagen img{
+    width: 500px;
+    height: 300px;
+    margin-top: 90px;
+    border-radius: 50px;     
+}
+.imagen{
+    width: 350px;
+    height: 250px; 
+ }
+.texto{
+    width: 40%;
+    margin-top: 5px;
+    color: white;
+}
+
+.texto h1{
+  font-size: 60px;  
+}
+
+.texto p{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.botones{
+    display: flex;
+    gap: 20px;
+}
+.botones a{
+   color: black;
+   background: white;
+   text-decoration: none;
+   padding: 10px 20px;
+   border-radius: 40px;
+   font-weight: bold;
+   text-transform: uppercase; 
+}
+
+.botones a:hover{
+    background-color: rgb(221, 49, 78);
+    transition: .3s;
+}
+.redes{
+    display: flex;
+    gap: 20px;
+}
+
+.redes .icon{
+    background: white;
+    padding: 6px;
+    border-radius: 50%;
+
+}
+.links input{
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    height: 30px;
+}
+footer{
+    background-color: #443d3c;
+    color: white;
+    padding: 20px;
+    
+}
+
+.primera-columna{
+    justify-content: space-around;
+    display: flex;
+}
+
+
+.links-nav,.links-politica{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.links-nav a,.links-politica a{
+    color: white;
+    text-decoration: none;
+    
+
+}
+
+.footer-redes{
+    display: flex;
+    gap: 25px;
+}
+
+.footer-redes .icon i{
+    width: 20px;
+    height: 30px;
+}
+
+
+.footer-logo img{
+    width: 70px;
+}
+
+.footer-logo,.footer-redes{
+    display: flex;
+    align-items: center;
+}
+.linksbuscador{
+    text-align: 100px;
+
+}
+#costa{
+    background-color:  #2a3131;
+}
+#sierra{
+    background-color:  #2a3131;
+
+}
+#selva{
+    background-color:  #2a3131;
+}

@@ -1,0 +1,19 @@
+.imagen{
+    transform: translate(20px,120px) !important;
+    width:500px;
+    height: 300px;
+    border-radius: 20px;
+}
+.texto{
+      margin-top: 100px;
+      color:white ;
+      background-color: #000000a6; 
+      padding: 15px;
+      border-radius: 15px;
+} 
+
+#sierra{
+    background-image:url("sierra.jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
