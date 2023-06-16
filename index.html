@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scale=1.0, minimun-scale=1.0">
     <title>Tradiciones Peruanas</title>
     <script>
-        window.alert("Bienvenido a ARCU - TRADICIONES PERUANAS")
+        window.alert("Bienvenido a ARCU - TRADICIONES PERUANAS")       
     </script>
 </head>
 <body>
@@ -20,7 +20,7 @@
             </div>
             <div class="links">
                 <a href="/">Inicio</a>
-                <a href="">Sobre</a>
+                <a href="">Destinos</a>
                 <a href="formulario/">Registro</a>
                 <a href="">Explorar</a>
                 <input class="buscador" type="text" placeholder="Buscar">            
@@ -32,6 +32,7 @@
             </div>
 
         </nav> 
+        <hr>
         <div class="contenedor">
             <div class="texto">
                 <h1>Tradiciones Peruanas</h1>
@@ -48,6 +49,7 @@
         </div>
                      
     </section>
+    
 <!--CIERRA PRIMERA SECCION-->
    
 <hr>
@@ -164,5 +166,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        let entrada = prompt("Ingrese su nombre:");
+
+        while (!esTextoValido(entrada)) {
+        entrada = prompt("Error: No se permiten números. Ingrese solo letras:");
+}
+
+        alert("Bienvend@: " + entrada);
+
+        function esTextoValido(texto) {
+        // Verificar si el texto contiene solo letras
+         return /^[a-zA-Z]+$/.test(texto);
+         
+}
+       
+    </script>
 </body>
 </html>

@@ -13,6 +13,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("img/arte\ y\ cultura.jpg ") ;
+    transition: 0.5s;
 } 
 .navegacion{
     display:flex ;
@@ -21,7 +22,12 @@ body{
     justify-content: space-around;
     align-items: center;
     height: 100px;
-    background-color:#443d3c;
+    
+}
+
+hr {
+    width:100%;
+
 }
 .links{
     display: flex;
@@ -41,6 +47,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #443d3c;
+    border-radius: 20px;
 }
 .logo img{
     width: 72%;
@@ -190,4 +198,11 @@ footer{
 }
 #selva{
     background-color:  #2a3131;
+}
+
+@media (max-width:600px){
+    .navegacion{background-color: red !important
+
+
+    }
 }
