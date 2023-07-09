@@ -22,7 +22,7 @@ body{
     justify-content: space-around;
     align-items: center;
     height: 100px;
-    
+    background: rgba(178, 51, 51, 0.493);
 }
 
 hr {
@@ -40,6 +40,9 @@ hr {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
+}
+.links a:hover{
+    color: rgb(0, 0, 0);
 }
 .logo{
     width: 100px;
@@ -200,6 +203,34 @@ footer{
     background-color:  #2a3131;
 }
 
+#cookie-banner {
+    position: fixed;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background-color:  #2a3131;
+    text-align: center;
+  }
+  #cookie-banner button {
+    margin: 10px;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  #cookie-banner button:hover{
+    background: rgb(221, 49, 78);
+  }
+
+  #cookie-banner a{
+    text-decoration: none;
+    color:rgb(221, 49, 78);
+  }
+
+  #content {
+    pointer-events: none;
+    opacity: 0.5;
+  }
 @media (max-width:600px){
     .navegacion{background-color: red !important
 

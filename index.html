@@ -9,10 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scale=1.0, minimun-scale=1.0">
     <title>Tradiciones Peruanas</title>
     <script>
-        window.alert("Bienvenido a ARCU - TRADICIONES PERUANAS")       
+       //window.alert("Bienvenido a ARCU - TRADICIONES PERUANAS")       
     </script>
 </head>
 <body>
+    <main id="content">
     <section class="principal">
         <nav class="navegacion">
             <div class="logo">
@@ -116,8 +117,6 @@
                 <h1>SELVA</h1>
                 <P>El arte y la cultura de la selva peruana son una expresión de la diversidad y la riqueza de esta región. La selva alberga a más de 60 pueblos indígenas que conservan sus lenguas, tradiciones y cosmovisiones. Su arte se manifiesta en la música, la danza, el tejido, la cerámica, la pintura y la escultura, entre otras formas. La cultura de la selva refleja la armonía y el respeto por la naturaleza, que es fuente de vida y sabiduría. La selva peruana es un tesoro de arte y cultura que debemos valorar y proteger.
                 </P>
-
-
                 <div class="botones">
                    <a href="/explorar/selva/">Explorar...</a>
                    
@@ -166,22 +165,45 @@
             </div>
         </div>
     </footer>
+   </main>
 
-    <script>
-        let entrada = prompt("Ingrese su nombre:");
+    <div id="cookie-banner" style="display: none;">
+        <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario.</p>
+        <button id="accept-cookies">Aceptar cookies</button>
+        <a href="politicas y privacidad/cookies.html">Política de privacidad</a>
+      </div>
 
-        while (!esTextoValido(entrada)) {
-        entrada = prompt("Error: No se permiten números. Ingrese solo letras:");
-}
+    <script>      
+            alert("BIENVENIDOS AL MEJOR SITIO WEB DE ARTE Y CULTURA");  
+            
+            
+    function showCookieBanner() {
+      document.getElementById("cookie-banner").style.display = "block";
+      document.getElementById("content").style.pointerEvents = "none";
+      document.getElementById("content").style.opacity = "0.5";
+    }
 
-        alert("Bienvend@: " + entrada);
+    function hideCookieBanner() {
+      document.getElementById("cookie-banner").style.display = "none";
+      document.getElementById("content").style.pointerEvents = "auto";
+      document.getElementById("content").style.opacity = "1";
+    }
 
-        function esTextoValido(texto) {
-        // Verificar si el texto contiene solo letras
-         return /^[a-zA-Z]+$/.test(texto);
-         
-}
-       
+    function acceptCookies() {
+      //Aquí puedes agregar la lógica para establecer las cookies y registrar la aceptación del usuario
+      hideCookieBanner();
+    }
+
+    window.onload = function() {
+      // Verificar si el usuario ya aceptó las cookies
+      var cookiesAccepted = localStorage.getItem("cookiesAccepted");
+
+      if (!cookiesAccepted) {
+        showCookieBanner();
+      }
+    }
+
+    document.getElementById("accept-cookies").addEventListener("click", acceptCookies);
     </script>
 </body>
 </html>
