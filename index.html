@@ -8,9 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scale=1.0, minimun-scale=1.0">
     <title>Tradiciones Peruanas</title>
-    <script>
-       //window.alert("Bienvenido a ARCU - TRADICIONES PERUANAS")       
-    </script>
 </head>
 <body>
     <main id="content">
@@ -173,37 +170,5 @@
         <a href="politicas y privacidad/cookies.html">Política de privacidad</a>
       </div>
 
-    <script>      
-            alert("BIENVENIDOS AL MEJOR SITIO WEB DE ARTE Y CULTURA");  
-            
-            
-    function showCookieBanner() {
-      document.getElementById("cookie-banner").style.display = "block";
-      document.getElementById("content").style.pointerEvents = "none";
-      document.getElementById("content").style.opacity = "0.5";
-    }
-
-    function hideCookieBanner() {
-      document.getElementById("cookie-banner").style.display = "none";
-      document.getElementById("content").style.pointerEvents = "auto";
-      document.getElementById("content").style.opacity = "1";
-    }
-
-    function acceptCookies() {
-      //Aquí puedes agregar la lógica para establecer las cookies y registrar la aceptación del usuario
-      hideCookieBanner();
-    }
-
-    window.onload = function() {
-      // Verificar si el usuario ya aceptó las cookies
-      var cookiesAccepted = localStorage.getItem("cookiesAccepted");
-
-      if (!cookiesAccepted) {
-        showCookieBanner();
-      }
-    }
-
-    document.getElementById("accept-cookies").addEventListener("click", acceptCookies);
-    </script>
 </body>
 </html>
