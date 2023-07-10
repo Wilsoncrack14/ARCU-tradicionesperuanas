@@ -3,11 +3,12 @@
 <head>
     <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximun-scale=1.0, minimun-scale=1.0">
     <title>Tradiciones Peruanas</title>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 
 </head>
 <body>
@@ -18,17 +19,23 @@
                 <img src="img/logo2.png" alt="">
             </div>
             <div class="links">
-                <a href="/">Inicio</a>
-                <a href="">Destinos</a>
-                <a href="formulario/">Registro</a>
-                <a href="">Explorar</a>
-                <input class="buscador" type="text" placeholder="Buscar">            
+                <a href="#">Inicio</a>
+                <a href="https://proyectoviajero.com/5-lugares-turisticos-para-visitar-en-peru/" target="_blank">Destinos</a>
+                <a href="https://travel1tours.com/lugares-turisticos-de-peru/" target="_blank">Galeria</a>
+                <a href="registro/index.html" target="_blank">Registro</a>
+
+                <form action="https://www.google.com/search" method="GET" target="_blank">
+                    <input class="buscador" type="text" name="q" placeholder="Buscar en Google">
+                    <input type="submit" value="Buscar">
+                </form>
+                        
             </div>
             <div class="redes">
-                <div class="icon"><i class="fa-brands fa-facebook"></i></div>
-                <div class="icon"><i class="fa-brands fa-instagram"></i></div>
-                <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+                <a href="https://www.facebook.com/arteyculturadelperu/"><div class="icon"><i class="fa-brands fa-facebook"></i></div></a>
+                <a href="https://www.instagram.com/explore/locations/103994088865051/mucen-lugar-de-arte-y-cultura/"><div class="icon"><i class="fa-brands fa-instagram"></i></div></a>
+                <a href="https://www.youtube.com/watch?v=xjd2Sh6ruJo/"><div class="icon"><i class="fa-brands fa-youtube"></i></div></a>
             </div>
+            
 
         </nav> 
         <hr>
@@ -157,52 +164,41 @@
                 <a href="">cookies</a>
             </div>
             <div class="footer-redes">
-                <div class="icon"><i class="fa-brands fa-facebook"></i></div>
-                <div class="icon"><i class="fa-brands fa-instagram"></i></div>
-                <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+                <a href="https://www.facebook.com/arteyculturadelperu/"><div class="icon"><i class="fa-brands fa-facebook"></i></div></a>
+                <a href="https://www.instagram.com/explore/locations/103994088865051/mucen-lugar-de-arte-y-cultura/"><div class="icon"><i class="fa-brands fa-instagram"></i></div></a>
+                <a href="https://www.youtube.com/watch?v=xjd2Sh6ruJo/"><div class="icon"><i class="fa-brands fa-youtube"></i></div></a>
             </div>
         </div>
     </footer>
    </main>
 
-    <div id="cookie-banner" style="display: none;">
-        <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario.</p>
-        <button id="accept-cookies">Aceptar cookies</button>
-        <a href="politicas y privacidad/cookies.html">Política de privacidad</a>
-      </div>
+   <div id="cajacookies">
+    <p><button onclick="aceptarCookies()" class="pull-right"><i class="fa fa-times"></i>Aceptar y cerrar éste mensaje</button> <br>
+    Éste sitio web usa cookies, si permanece aquí acepta su uso.
+    Puede leer más sobre el uso de cookies en nuestra <br><a href="politica.html">Política de privacidad</a>.
+    </p>
+    </div>
 
-      <script>      
-        alert("BIENVENIDOS AL MEJOR SITIO WEB DE ARTE Y CULTURA");  
-        
-        
-function showCookieBanner() {
-  document.getElementById("cookie-banner").style.display = "block";
-  document.getElementById("content").style.pointerEvents = "none";
-  document.getElementById("content").style.opacity = "0.5";
-}
+  <script>
+    /* ésto comprueba la localStorage si ya tiene la variable guardada */
+    function compruebaAceptaCookies() {
+      if(localStorage.aceptaCookies != 'true'){
+        cajacookies.style.display = 'block';
+      }
+    }
 
-function hideCookieBanner() {
-  document.getElementById("cookie-banner").style.display = "none";
-  document.getElementById("content").style.pointerEvents = "auto";
-  document.getElementById("content").style.opacity = "1";
-}
-
-function acceptCookies() {
-  //Aquí puedes agregar la lógica para establecer las cookies y registrar la aceptación del usuario
-  hideCookieBanner();
-}
-
-window.onload = function() {
-  // Verificar si el usuario ya aceptó las cookies
-  var cookiesAccepted = localStorage.getItem("cookiesAccepted");
-
-  if (!cookiesAccepted) {
-    showCookieBanner();
-  }
-}
-
-document.getElementById("accept-cookies").addEventListener("click", acceptCookies);
-</script>
-
+    /* aquí guardamos la variable de que se ha
+    aceptado el uso de cookies así no mostraremos
+    el mensaje de nuevo */
+    function aceptarCookies() {
+      localStorage.aceptaCookies = 'true';
+      cajacookies.style.display = 'none';
+    }
+    
+    /* ésto se ejecuta cuando la web está cargada */
+    $(document).ready(function () {
+      compruebaAceptaCookies();
+    });
+    </script>
 </body>
 </html>

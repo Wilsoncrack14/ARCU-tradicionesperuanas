@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 *{  padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -44,6 +45,10 @@ hr {
 .links a:hover{
     color: rgb(0, 0, 0);
 }
+
+.links input{
+    padding: 10px;
+}
 .logo{
     width: 100px;
     height: 100%;
@@ -54,8 +59,11 @@ hr {
     border-radius: 20px;
 }
 .logo img{
-    width: 72%;
+    width: 90%;
+    transform: scale(0.8);
+    cursor: pointer;
 }
+
 .texto{
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.682);
@@ -173,6 +181,12 @@ footer{
     display: flex;
     gap: 25px;
 }
+.footer-redes a{
+    display: 4px;
+    background: #fff;
+    border-radius: 10px;
+    
+}
 
 .footer-redes .icon i{
     width: 20px;
@@ -203,37 +217,110 @@ footer{
     background-color:  #2a3131;
 }
 
-#cookie-banner {
+#cajacookies {
+    display: none;
+    box-shadow: 0px 0px 5px 5px #3934345a;
+    background-color: #2a3131;
+    color: rgb(255, 255, 255);
+    padding: 50px;
+    margin-left: 325px;
+    margin-top: 400px;
     position: fixed;
-    color: #fff;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px;
-    background-color:  #2a3131;
-    text-align: center;
+    top: 0px;
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
   }
-  #cookie-banner button {
-    margin: 10px;
-    padding: 7px;
+
+  #cajacookies p{
+    font-size: 20px;
+  }
+  
+  #cajacookies button {
+    padding: 5px;
     border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
   }
-  #cookie-banner button:hover{
+
+  #cajacookies button:hover{
+    cursor: pointer;
     background: rgb(221, 49, 78);
   }
-
-  #cookie-banner a{
+  #cajacookies a{
     text-decoration: none;
-    color:rgb(221, 49, 78);
+    color: rgb(221, 49, 78);
   }
 
-  #content {
-    pointer-events: none;
-    opacity: 0.5;
-  }
-@media (max-width:600px){
-    .navegacion{background-color: red !important
-
+  /* Media Queries */
+@media (max-width: 768px) {
+    .texto {
+      margin-top: 50px;
+    }
+    .contenedor {
+      flex-direction: column;
+      width: 800px;
+    }
+    .imagen {
+      width: 5%;
+      height: auto;
+      transform: none;
+      margin-top: -70px;
+      margin-left: 10px;
 
     }
-}
+    .imagen img{
+        width: 250px;
+        height: 200px;
+        border-radius: 15px;
+    }
+    .texto h1 {
+      font-size: 40px;
+    }
+    .botones {
+      flex-wrap: wrap;
+    }
+    .botones a {
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .texto {
+      margin-top: 30px;
+    }
+    .texto h1 {
+      font-size: 30px;
+    }
+    .texto p {
+      font-size: 12px;
+    }
+    }
+
+    @media (max-width: 768px) {
+        .navegacion {
+          flex-direction: column;
+          height: auto;
+        }
+        
+        .links {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .logo {
+          margin-bottom: 20px;
+        }
+        
+        .redes {
+          margin-top: 20px;
+        }
+        .video {
+            width: 50px;
+            height: 50px;
+
+        }
+
+    
+      }
+      

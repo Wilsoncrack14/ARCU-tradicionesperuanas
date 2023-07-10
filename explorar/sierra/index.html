@@ -12,19 +12,22 @@
 <body>
     <nav class="navegacion">
         <div class="logo">
-            <img src="img/logo2.png" alt="">
+            <img src="../../img/logo2.png" alt="">
         </div>
         <div class="links">
             <a href="/">Inicio</a>
             <a href="">Sobre</a>
             <a href="formulario/">Contacto</a>
             <a href="">Explorar</a>
-            <input class="buscador" type="text" placeholder="Buscar">            
+            <form action="https://www.google.com/search" method="GET" target="_blank">
+                <input class="buscador" type="text" name="q" placeholder="Buscar en Google">
+                <input type="submit" value="Buscar">
+            </form>          
         </div>
         <div class="redes">
-            <div class="icon"><i class="fa-brands fa-facebook"></i></div>
-            <div class="icon"><i class="fa-brands fa-instagram"></i></div>
-            <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+            <a href="https://www.facebook.com/arteyculturadelperu/"><div class="icon"><i class="fa-brands fa-facebook"></i></div></a>
+            <a href="https://www.instagram.com/explore/locations/103994088865051/mucen-lugar-de-arte-y-cultura/"><div class="icon"><i class="fa-brands fa-instagram"></i></div></a>
+            <a href="https://www.youtube.com/watch?v=xjd2Sh6ruJo/"><div class="icon"><i class="fa-brands fa-youtube"></i></div></a>
         </div>
 
     </nav> 
